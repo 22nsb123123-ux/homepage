@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이동철 반도체 길잡이</title>
+<meta name="description" content="이동철은 반도체 부품 원가절감을 돕는 반도체 제조·무역 파트너야. 합리적인 견적·빠른 납기로 품질은 지키면서 원가와 납기를 함께 줄여.">
+<meta name="author" content="이동철">
+<meta property="og:title" content="이동철 · 반도체 제조/무역 성공 길잡이">
+<meta property="og:description" content="품질은 지키면서 원가와 납기를 함께 줄일 수 있을까? 반도체 부품 원가절감, 합리적인 견적·빠른 납기.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@400;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "이동철",
+  "jobTitle": "반도체 제조/무역 성공 길잡이",
+  "description": "반도체 부품 원가절감, 합리적인 견적·빠른 납기를 돕는 반도체 제조·무역 파트너",
+  "knowsAbout": ["반도체 부품 원가절감", "반도체 부품 견적", "반도체 납기 관리", "반도체 제조·무역"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "견적 요청할 때 뭘 보내면 돼?",
+     "acceptedAnswer": {"@type": "Answer", "text": "부품번호(P/N), 필요 수량, 목표 단가, 희망 납기, 거래 조건 다섯 가지면 견적을 시작할 수 있어."}},
+    {"@type": "Question", "name": "MOQ가 뭐야?",
+     "acceptedAnswer": {"@type": "Answer", "text": "MOQ(Minimum Order Quantity)는 공급처가 받아 주는 최소 주문 수량이야. 이보다 적게 사면 단가가 오르거나 주문이 안 될 수 있어."}},
+    {"@type": "Question", "name": "리드타임과 납기는 뭐가 달라?",
+     "acceptedAnswer": {"@type": "Answer", "text": "리드타임은 주문부터 입고까지 걸리는 기간이고, 납기는 그 기간을 반영해 확정한 도착 날짜야."}},
+    {"@type": "Question", "name": "FOB와 DDP는 뭐가 달라?",
+     "acceptedAnswer": {"@type": "Answer", "text": "FOB는 판매자가 선적항에서 물건을 배에 실을 때까지 책임지는 조건이고, DDP는 판매자가 관세까지 부담해 구매자가 정한 장소에 도착할 때까지 책임지는 조건이야."}}
+  ]
+}
+</script>
+<style>
+  /* 레이아웃: 견적서 한 장처럼 왼쪽 정렬, 질문형 소제목 → 직답 → 근거 순서로 내려가는 단일 칼럼 */
+  :root {
+    --color-bg: #f2ecf4;
+    --color-text: #0A0A0A;
+    --color-accent: #0062ff;
+    --color-surface: #ffffff;
+    --color-text-muted: rgba(10, 10, 10, 0.64);
+    --color-border: rgba(10, 10, 10, 0.12);
+    --color-accent-soft: rgba(0, 98, 255, 0.08);
+    --color-on-accent: #ffffff;
+
+    --font-heading: 'Black Han Sans', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    --font-body: 'Noto Serif KR', 'AppleMyungjo', 'Batang', serif;
+
+    --fs-title: 40px; --fs-subtitle: 24px; --fs-body: 17px; --fs-label: 13px;
+    --radius-sm: 6px; --radius-md: 12px;
+    --space-1: 4px; --space-2: 8px; --space-3: 16px; --space-4: 24px; --space-5: 40px; --space-6: 72px;
+    --shadow-card: 0 1px 2px rgba(10, 10, 10, 0.06);
+    --measure: 680px;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: 1.75;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 24px; }
+
+  h1, h2, h3 { font-family: var(--font-heading); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+  h1 { font-size: var(--fs-title); line-height: 1.2; }
+  h2 { font-size: var(--fs-subtitle); line-height: 1.3; }
+  h3 { font-size: 20px; line-height: 1.35; }
+  p { margin: 0; }
+  .label {
+    font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.04em;
+    line-height: 1.4; color: var(--color-text-muted);
+  }
+  a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* 상단 */
+  .top { padding-block: var(--space-4); border-bottom: 1px solid var(--color-border); }
+  .top .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-2) var(--space-4); }
+  .brand { font-family: var(--font-heading); font-size: 20px; color: var(--color-text); text-decoration: none; }
+  .brand small { font-family: var(--font-body); font-size: var(--fs-label); font-weight: 600; color: var(--color-text-muted); margin-left: var(--space-2); }
+  .nav { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); font-size: 15px; }
+  .nav a { color: var(--color-text); text-decoration: none; }
+  .nav a:hover { text-decoration: underline; }
+
+  /* 버튼 */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 48px; padding-inline: 24px; border-radius: var(--radius-sm);
+    font-family: var(--font-body); font-size: 15px; font-weight: 600; letter-spacing: 0.02em;
+    text-decoration: none; cursor: pointer; border: 1px solid transparent;
+    transition: filter .15s, background-color .15s;
+  }
+  .btn-primary { background: var(--color-accent); color: var(--color-on-accent); }
+  .btn-primary:hover { filter: brightness(0.92); }
+  .btn-secondary { background: transparent; color: var(--color-text); border-color: var(--color-text); }
+  .btn-secondary:hover { background: var(--color-accent-soft); }
+
+  /* 히어로 */
+  .hero { padding-block: var(--space-6) var(--space-5); }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--space-5); align-items: start; }
+  .hero-copy { display: grid; gap: var(--space-4); min-width: 0; }
+  .question {
+    font-family: var(--font-heading); font-size: 28px; line-height: 1.35;
+    color: var(--color-accent); text-wrap: balance;
+  }
+  .lead { max-width: 34em; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-4); }
+
+  /* 견적 요청 시트 */
+  .sheet {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-card);
+    padding: var(--space-4); min-width: 0;
+  }
+  .sheet-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); padding-bottom: var(--space-3); border-bottom: 1px solid var(--color-text); }
+  .sheet-head h2 { font-size: 20px; }
+  .sheet dl { margin: 0; }
+  .sheet .row { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: var(--space-3); padding-block: 12px; border-bottom: 1px solid var(--color-border); }
+  .sheet dt { font-size: 15px; font-weight: 600; }
+  .sheet dd { margin: 0; font-size: 15px; line-height: 1.6; color: var(--color-text-muted); }
+  .sheet-foot { padding-top: var(--space-3); font-size: 15px; }
+
+  /* 섹션 공통 */
+  section.block { padding-block: var(--space-6); border-top: 1px solid var(--color-border); }
+  .block-head { display: grid; gap: var(--space-3); max-width: var(--measure); margin-bottom: var(--space-5); }
+  .answer { font-size: 19px; font-weight: 600; line-height: 1.65; }
+  .prose { display: grid; gap: var(--space-3); max-width: var(--measure); }
+
+  /* 원가·납기 지렛대 */
+  .levers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+  .lever { display: grid; gap: var(--space-2); align-content: start; border-top: 2px solid var(--color-text); padding-top: var(--space-3); min-width: 0; }
+  .lever h3 { font-size: 20px; }
+
+  /* 서비스 카드 */
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+  .card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-card);
+    padding: var(--space-4); display: grid; gap: var(--space-3); align-content: start; min-width: 0;
+  }
+
+  /* 진행 단계 (실제 순서라 번호를 씀) */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); counter-reset: step; }
+  .steps li { counter-increment: step; display: grid; gap: var(--space-2); align-content: start; min-width: 0; }
+  .steps li::before {
+    content: counter(step); font-family: var(--font-heading); font-size: 32px; line-height: 1;
+    color: var(--color-accent); font-variant-numeric: tabular-nums;
+  }
+  .steps h3 { font-size: 20px; }
+  .steps p { font-size: 15px; line-height: 1.65; color: var(--color-text-muted); }
+  .note { margin-top: var(--space-5); max-width: var(--measure); font-size: 15px; }
+
+  /* 증거 자리 */
+  .need {
+    display: inline; padding: 1px 6px; border: 1px dashed var(--color-text-muted);
+    border-radius: 4px; font-size: 14px; font-weight: 600; color: var(--color-text-muted);
+    background: var(--color-surface);
+  }
+  .proofs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+  .proof {
+    border: 1px dashed rgba(10, 10, 10, 0.32); border-radius: var(--radius-md);
+    padding: var(--space-4); display: grid; gap: var(--space-2); align-content: start; min-width: 0;
+  }
+  .proof h3 { font-size: 20px; }
+  .proof p { font-size: 15px; color: var(--color-text-muted); }
+
+  /* 소개 */
+  .about { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--space-5); align-items: start; }
+  .values { margin: 0; display: grid; gap: var(--space-4); }
+  .values div { border-left: 1px solid var(--color-text); padding-left: var(--space-3); }
+  .values dt { margin-bottom: var(--space-1); }
+  .values dd { margin: 0; }
+
+  /* FAQ */
+  .faq { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5) var(--space-5); margin: 0; }
+  .faq div { display: grid; gap: var(--space-2); align-content: start; min-width: 0; }
+  .faq dt h3 { font-size: 20px; }
+  .faq dd { margin: 0; }
+
+  /* 견적 요청 */
+  .contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-5); align-items: start; }
+  .template {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: var(--space-4);
+    display: grid; gap: var(--space-3); min-width: 0;
+  }
+  .template pre {
+    margin: 0; white-space: pre-wrap; font-family: var(--font-body); font-size: 15px; line-height: 1.8;
+    font-variant-numeric: tabular-nums;
+  }
+  .copy-status { font-size: var(--fs-label); font-weight: 600; color: var(--color-text-muted); min-height: 1.4em; }
+
+  footer { padding-block: var(--space-5); border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-text-muted); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2) var(--space-4); }
+
+  @media (max-width: 900px) {
+    .hero .wrap, .about, .contact { grid-template-columns: minmax(0, 1fr); }
+    .levers, .cards { grid-template-columns: minmax(0, 1fr); }
+    .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 600px) {
+    :root { --fs-title: 32px; --fs-subtitle: 20px; --space-6: 48px; }
+    .wrap { padding-inline: 16px; }
+    .question { font-size: 24px; }
+    .steps, .proofs, .faq { grid-template-columns: minmax(0, 1fr); }
+    .sheet .row { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">이동철<small>반도체 제조/무역 성공 길잡이</small></a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#answer">원가·납기</a>
+      <a href="#service">하는 일</a>
+      <a href="#process">진행 과정</a>
+      <a href="#about">소개</a>
+      <a href="#faq">자주 묻는 질문</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="label">반도체 부품 원가절감 · 합리적인 견적·빠른 납기 · 반도체 제조·무역 파트너</p>
+        <h1>원가절감이 막막한 반도체 제조업체의 성공 길잡이, 이동철</h1>
+        <p class="question">품질은 지키면서 원가와 납기를 함께 줄일 수 있을까?</p>
+        <p class="lead">막막하면 하나씩 풀면 돼. 합리적인 견적과 빠른 납기로, 품질 기준 안에서 원가를 낮출 길을 같이 찾을게.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">견적 받기</a>
+          <a href="#process">진행 과정 보기</a>
+        </div>
+      </div>
+
+      <aside class="sheet" aria-labelledby="sheet-title">
+        <div class="sheet-head">
+          <h2 id="sheet-title">견적 요청 시트</h2>
+          <span class="label num">5줄</span>
+        </div>
+        <dl>
+          <div class="row"><dt>부품번호(P/N)</dt><dd>제조사 품번 그대로 적어 줘.</dd></div>
+          <div class="row"><dt>필요 수량</dt><dd>회차별 수량, 알면 연간 수량도.</dd></div>
+          <div class="row"><dt>목표 단가</dt><dd>지금 사는 가격이면 충분해.</dd></div>
+          <div class="row"><dt>희망 납기</dt><dd>"빨리" 말고 날짜로 적어 줘.</dd></div>
+          <div class="row"><dt>거래 조건</dt><dd>FOB, DDP 같은 인도 조건.</dd></div>
+        </dl>
+        <p class="sheet-foot">이 다섯 줄이면 견적 근거를 숫자로 보여줄게.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="answer" aria-labelledby="answer-title">
+    <div class="wrap">
+      <div class="block-head">
+        <p class="label">반도체 부품 원가절감</p>
+        <h2 id="answer-title">품질은 지키면서 원가와 납기를 함께 줄일 수 있을까?</h2>
+        <p class="answer">품질 기준을 먼저 고정하고 그 안에서 공급처·수량·거래 조건을 비교하면, 함께 줄일 수 있는 지점이 보여.</p>
+        <p>원가만 보고 부품을 바꾸면 품질이 흔들리고, 납기만 보면 단가가 오르기 쉬워. 그래서 순서를 지켜.</p>
+      </div>
+      <div class="levers">
+        <div class="lever">
+          <h3>품질 기준부터 고정해</h3>
+          <p>데이터시트 사양, 인증 조건, 허용 대체품 범위를 먼저 정해. 이 선은 원가 때문에 넘지 않아.</p>
+        </div>
+        <div class="lever">
+          <h3>공급처를 나란히 비교해</h3>
+          <p>같은 사양 안에서 공급처별 단가와 리드타임(주문부터 입고까지 걸리는 기간)을 한 표에 놓고 봐.</p>
+        </div>
+        <div class="lever">
+          <h3>수량과 조건을 조정해</h3>
+          <p>MOQ(최소 주문 수량), 발주 시점, 인도 조건을 바꾸면 단가와 납기가 같이 움직여.</p>
+        </div>
+      </div>
+      <p class="note">실제 절감 사례: <span class="need">[증거 필요: 원가절감 사례와 절감률]</span></p>
+    </div>
+  </section>
+
+  <section class="block" id="service" aria-labelledby="service-title">
+    <div class="wrap">
+      <div class="block-head">
+        <p class="label">반도체 제조·무역 파트너</p>
+        <h2 id="service-title">이동철은 어떤 일을 해?</h2>
+        <p class="answer">반도체 제조업체가 원가절감 압박을 견적과 납기로 풀 수 있게, 부품 조달 과정을 같이 설계해.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <p class="label">반도체 부품 원가절감</p>
+          <h3>지금 단가, 더 낮출 수 있어?</h3>
+          <p>같은 품질 조건에서 공급처와 거래 조건을 비교하면 낮출 여지가 있는지 판단할 수 있어. 여지가 없으면 없다고 말해 줄게.</p>
+        </article>
+        <article class="card">
+          <p class="label">합리적인 견적·빠른 납기</p>
+          <h3>견적 근거는 뭐야?</h3>
+          <p>단가, 수량, 운송·관세 조건을 나눠서 보여줄게. 어디서 비용이 생기는지 보이면 협상할 지점도 보여.</p>
+        </article>
+        <article class="card">
+          <p class="label">반도체 제조·무역 파트너</p>
+          <h3>한 번 견적 받고 끝나?</h3>
+          <p>한 번의 견적으로 끝내지 않고, 납기 확인과 다음 발주 계획까지 같이 보는 파트너가 되려고 해.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="block-head">
+        <p class="label">합리적인 견적·빠른 납기</p>
+        <h2 id="process-title">견적은 어떻게 진행돼?</h2>
+        <p class="answer">요청 정리, 공급처 비교, 견적서 전달, 납기 확정의 네 단계로 진행해.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>요청 정리</h3>
+          <p>견적 요청 시트 다섯 줄을 받아서 사양과 목표를 확인해.</p>
+        </li>
+        <li>
+          <h3>공급처 비교</h3>
+          <p>같은 사양 안에서 단가와 리드타임을 나란히 비교해.</p>
+        </li>
+        <li>
+          <h3>견적서 전달</h3>
+          <p>단가·수량·조건을 나눈 견적서와 그 근거를 같이 보내.</p>
+        </li>
+        <li>
+          <h3>납기 확정</h3>
+          <p>발주가 결정되면 도착 날짜를 확정하고 진행 상황을 공유해.</p>
+        </li>
+      </ol>
+      <p class="note">견적 회신까지 걸리는 기간: <span class="need">[증거 필요: 평균 견적 회신 기간]</span></p>
+    </div>
+  </section>
+
+  <section class="block" id="proof" aria-labelledby="proof-title">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="proof-title">실제로 해낸 일이 있어?</h2>
+        <p class="answer">여기에는 확인할 수 있는 실제 기록만 올려. 지어낸 숫자나 후기는 쓰지 않아.</p>
+      </div>
+      <div class="proofs">
+        <div class="proof">
+          <p class="label">거래 실적</p>
+          <h3>어떤 부품을 얼마나 다뤘어?</h3>
+          <p><span class="need">[증거 필요: 취급 부품군·거래 규모·기간]</span></p>
+        </div>
+        <div class="proof">
+          <p class="label">원가절감 사례</p>
+          <h3>얼마나 줄였어?</h3>
+          <p><span class="need">[증거 필요: 사례별 절감 전후 단가 또는 절감률]</span></p>
+        </div>
+        <div class="proof">
+          <p class="label">납기 사례</p>
+          <h3>납기를 얼마나 당겼어?</h3>
+          <p><span class="need">[증거 필요: 사례별 기존 납기와 단축된 납기]</span></p>
+        </div>
+        <div class="proof">
+          <p class="label">고객 후기</p>
+          <h3>같이 일한 사람은 뭐라고 해?</h3>
+          <p><span class="need">[증거 필요: 게재 동의를 받은 실제 후기와 출처 링크]</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about" aria-labelledby="about-title">
+    <div class="wrap about">
+      <div class="prose">
+        <p class="label">소개</p>
+        <h2 id="about-title">이동철은 왜 이 일을 해?</h2>
+        <p class="answer">나는 AI를 활용해 나의 잠재력을 발견하고, 사람들이 진정한 자기 색깔로 살아가도록 나와 타인을 잇는 브릿지 역할을 하고 싶어서 이 일을 해.</p>
+        <p>반도체 일도 같아. 원가절감 압박 앞에서 막막한 사람에게 견적과 납기라는 숫자로 길을 보여주는 게 내 방식이야.</p>
+        <p>경력과 이력: <span class="need">[증거 필요: 경력·주요 이력·자격]</span></p>
+      </div>
+      <dl class="values">
+        <div>
+          <dt class="label">함께하고 싶은 사람</dt>
+          <dd>진정한 자신의 잠재력을 발견하고 싶은 사람</dd>
+        </div>
+        <div>
+          <dt class="label">내가 지키는 가치</dt>
+          <dd>자신이 누구인지, 존재에 대한 의문을 푸는 것</dd>
+        </div>
+        <div>
+          <dt class="label">일하는 기준</dt>
+          <dd>품질은 지키고, 원가와 납기는 숫자와 날짜로 말한다.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="block-head">
+        <p class="label">자주 묻는 질문</p>
+        <h2 id="faq-title">견적 전에 뭘 알아 두면 좋아?</h2>
+        <p class="answer">요청할 항목 다섯 가지와 용어 세 개만 알면 견적 대화가 빨라져.</p>
+      </div>
+      <dl class="faq">
+        <div>
+          <dt><h3>견적 요청할 때 뭘 보내면 돼?</h3></dt>
+          <dd>부품번호(P/N), 필요 수량, 목표 단가, 희망 납기, 거래 조건 다섯 가지면 견적을 시작할 수 있어.</dd>
+        </div>
+        <div>
+          <dt><h3>MOQ가 뭐야?</h3></dt>
+          <dd>MOQ(Minimum Order Quantity)는 공급처가 받아 주는 최소 주문 수량이야. 이보다 적게 사면 단가가 오르거나 주문이 안 될 수 있어.</dd>
+        </div>
+        <div>
+          <dt><h3>리드타임과 납기는 뭐가 달라?</h3></dt>
+          <dd>리드타임은 주문부터 입고까지 걸리는 기간이고, 납기는 그 기간을 반영해 확정한 도착 날짜야.</dd>
+        </div>
+        <div>
+          <dt><h3>FOB와 DDP는 뭐가 달라?</h3></dt>
+          <dd>FOB는 판매자가 선적항에서 물건을 배에 실을 때까지 책임지는 조건이고, DDP는 판매자가 관세까지 부담해 구매자가 정한 장소에 도착할 때까지 책임지는 조건이야.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact">
+      <div class="prose">
+        <p class="label">견적 받기</p>
+        <h2 id="contact-title">견적은 어떻게 요청해?</h2>
+        <p class="answer">오른쪽 양식을 복사해서 채운 뒤 보내 주면 돼.</p>
+        <p>다음 단계는 이거야. 양식을 채우면 견적 근거와 함께 회신할게.</p>
+        <p>연락처: <span class="need">[증거 필요: 이메일·전화·메신저 연락처]</span></p>
+      </div>
+      <div class="template">
+        <p class="label">견적 요청 양식</p>
+        <pre id="request-template">[견적 요청 · 이동철]
+부품번호(P/N):
+필요 수량(회차 / 연간):
+목표 단가:
+희망 납기(날짜):
+거래 조건(FOB · DDP 등):
+회사명 / 담당자 / 연락처:</pre>
+        <div class="actions">
+          <button class="btn btn-secondary" id="copy-btn" type="button">양식 복사</button>
+          <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>이동철 · 반도체 제조/무역 성공 길잡이</span>
+    <span class="num">© 2026 이동철</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy-btn');
+    var pre = document.getElementById('request-template');
+    var status = document.getElementById('copy-status');
+    function selectText() {
+      var range = document.createRange();
+      range.selectNodeContents(pre);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      status.textContent = '선택했어. Ctrl+C로 복사해.';
+    }
+    btn.addEventListener('click', function () {
+      var text = pre.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          status.textContent = '복사했어.';
+        }, selectText);
+      } else {
+        selectText();
+      }
+    });
+  })();
+</script>
